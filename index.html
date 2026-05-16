@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minmoy Gondhia | Sound Designer | Music Producer | Audio Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        studioDark: '#050508',
+                        neonPurple: '#A855F7'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #050508; color: #f1f5f9; }
+        .glass-card { background: rgba(15, 15, 25, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(168, 85, 247, 0.1); }
+        .glass-card:hover { border-color: rgba(168, 85, 247, 0.3); box-shadow: 0 0 25px rgba(168, 85, 247, 0.15); transform: translateY(-4px); }
+        .custom-wave-bar { transition: height 0.3s ease; }
+    </style>
+</head>
+<body class="selection:bg-purple-600 selection:text-white font-sans overflow-x-hidden">
+
+    <nav class="sticky top-0 w-full backdrop-blur-xl bg-black/40 border-b border-purple-500/10 z-40 px-6 lg:px-12 py-4 flex justify-between items-center">
+        <div class="text-sm font-bold tracking-[0.3em] text-white">MINMOY GONDHIA <span class="text-purple-500">//</span> AUDIO</div>
+        <a href="#connect" class="text-xs tracking-widest uppercase text-slate-400 hover:text-purple-500 transition-colors">Contact</a>
+    </nav>
+
+    <audio id="globalAudioEngine" onended="resetAudioUI()"></audio>
+
+    <header class="max-w-7xl mx-auto px-6 lg:px-12 py-20 border-b border-purple-500/5 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-3 flex justify-center">
+            <div class="relative group">
+                <div class="absolute inset-0 rounded-2xl bg-purple-600 opacity-20 filter blur-xl"></div>
+                <div class="w-56 h-72 rounded-2xl border border-purple-500/20 overflow-hidden bg-zinc-900 flex items-center justify-center p-2">
+                    <img src="guitar.png" alt="Minmoy Gondhia Studio Work" class="w-full h-full object-cover rounded-xl grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" onerror="this.style.display='none';">
+                    <div class="absolute bottom-4 left-4 text-[10px] font-mono text-purple-400 tracking-wider">STUDIO_ARRAY_01</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:col-span-6 text-center lg:text-left">
+            <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-white mb-2">MINMOY <span class="text-purple-500">GONDHIA</span></h1>
+            <div class="text-[11px] font-mono tracking-[0.25em] text-purple-400 mb-6 font-bold">SOUND DESIGNER | MUSIC PRODUCER | AUDIO POST-PRODUCTION ENGINEER</div>
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed mb-8 max-w-xl">
+                "I craft immersive audio experiences through sound design, music production and end-to-end audio post-production. From raw recordings to final mix — I bring stories, emotions and ideas to life through sound."
+            </p>
+        </div>
+
+        <div class="lg:col-span-3 hidden lg:flex justify-end">
+            <div class="w-56 h-56 rounded-2xl border border-purple-500/10 bg-zinc-900/40 p-6 flex flex-col justify-between">
+                <div class="flex justify-between items-center"><span class="text-xs font-mono text-purple-400">96kHz</span><span class="w-2 h-2 rounded-full bg-emerald-500"></span></div>
+                <div><div class="text-2xl font-bold font-mono text-white">24-BIT</div><div class="text-[9px] font-mono text-zinc-500">PROCESSING SYSTEM</div></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-6 lg:px-12 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div class="glass-card p-5 rounded-xl transition-all duration-300 cursor-pointer" onclick="openModal('Music Production', 'Creative composition, tracking, and arrangement tailored across structural boundaries.', 'Logic Pro, FL Studio')">
+            <div class="text-2xl mb-3">🎵</div><h3 class="text-xs font-bold uppercase tracking-wider text-white mb-1">Music Production</h3><p class="text-[11px] text-zinc-400">Click to explore parameters →</p>
+        </div>
+        <div class="glass-card p-5 rounded-xl transition-all duration-300 cursor-pointer" onclick="openModal('Sound Design', 'Crafting custom auditory assets, synthetic foley, and atmospheric elements.', 'Logic Pro, Premiere Pro')">
+            <div class="text-2xl mb-3">🎛️</div><h3 class="text-xs font-bold uppercase tracking-wider text-white mb-1">Sound Design</h3><p class="text-[11px] text-zinc-400">Click to explore parameters →</p>
+        </div>
+        <div class="glass-card p-5 rounded-xl transition-all duration-300 cursor-pointer" onclick="openModal('Mixing & Mastering', 'Achieving acoustic balance, frequency separation, and global industry loudness compliance.', 'Logic Pro')">
+            <div class="text-2xl mb-3">🎚️</div><h3 class="text-xs font-bold uppercase tracking-wider text-white mb-1">Mixing & Mastering</h3><p class="text-[11px] text-zinc-400">Click to explore parameters →</p>
+        </div>
+        <div class="glass-card p-5 rounded-xl transition-all duration-300 cursor-pointer" onclick="openModal('Audio Post Production', 'End-to-end sound system balancing for cinema, spatial distribution, and commercial media.', 'DaVinci Resolve')">
+            <div class="text-2xl mb-3">🎬</div><h3 class="text-xs font-bold uppercase tracking-wider text-white mb-1">Audio Post Production</h3><p class="text-[11px] text-zinc-400">Click to explore parameters →</p>
+        </div>
+        <div class="glass-card p-5 rounded-xl transition-all duration-300 cursor-pointer" onclick="openModal('Dialogue Editing', 'Surgical noise profile extraction, spectral repair, and vocal presence enhancement.', 'Restoration Suites')">
+            <div class="text-2xl mb-3">🎙️</div><h3 class="text-xs font-bold uppercase tracking-wider text-white mb-1">Dialogue Cleanup</h3><p class="text-[11px] text-zinc-400">Click to explore parameters →</p>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+        <h2 class="text-xl font-bold tracking-widest text-white uppercase mb-8 border-b border-purple-500/10 pb-2">MUSIC PRODUCTION</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-6 rounded-xl border border-purple-500/10 bg-zinc-900/30 flex items-center gap-6">
+                <button onclick="toggleAudio('back to you remix.mp3', this)" class="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-lg hover:bg-purple-500 shrink-0">▶</button>
+                <div>
+                    <h3 class="text-sm font-bold text-white">Back To You – Remix (01:38)</h3>
+                    <p class="text-xs text-zinc-400 mt-1">A remix project showcasing arrangement choices, musical interpretation and production workflow.</p>
+                </div>
+            </div>
+            <div class="p-6 rounded-xl border border-purple-500/10 bg-zinc-900/30 flex items-center gap-6">
+                <button onclick="toggleAudio('fly.mp3', this)" class="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-lg hover:bg-purple-500 shrink-0">▶</button>
+                <div>
+                    <h3 class="text-sm font-bold text-white">Fly (03:02)</h3>
+                    <p class="text-xs text-zinc-400 mt-1">Original music production demonstrating composition, sound selection, mixing and emotional storytelling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+        <h2 class="text-xl font-bold tracking-widest text-white uppercase mb-8 border-b border-purple-500/10 pb-2">AUDIO POST-PRODUCTION WORK</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="p-5 rounded-xl border border-purple-500/10 bg-zinc-900/20 flex flex-col justify-between">
+                <div><h3 class="text-xs font-bold text-white uppercase mb-2">PocketFM Work Sample (13:14)</h3><p class="text-xs text-zinc-400 leading-relaxed">Dialogue editing, sound cleanup, sound design, background score placement, mixing and mastering.</p></div>
+                <button onclick="toggleAudio('portfolio for audiostory.mp3', this)" class="mt-4 px-3 py-1.5 border border-purple-500/30 text-[11px] font-mono text-purple-400 rounded hover:bg-purple-900/20">▶ PREVIEW SYSTEM</button>
+            </div>
+            <div class="p-5 rounded-xl border border-purple-500/10 bg-zinc-900/20 flex flex-col justify-between">
+                <div><h3 class="text-xs font-bold text-white uppercase mb-2">KukuFM Work Sample (05:48)</h3><p class="text-xs text-zinc-400 leading-relaxed">Audio post-production involving narrative enhancement and polished listener experience.</p></div>
+                <button onclick="toggleAudio('kukufm.mp3', this)" class="mt-4 px-3 py-1.5 border border-purple-500/30 text-[11px] font-mono text-purple-400 rounded hover:bg-purple-900/20">▶ PREVIEW SYSTEM</button>
+            </div>
+            <div class="p-5 rounded-xl border border-purple-500/10 bg-zinc-900/20 flex flex-col justify-between">
+                <div><h3 class="text-xs font-bold text-white uppercase mb-2">ElevenLabs Narration 1 (02:52)</h3><p class="text-xs text-zinc-400 leading-relaxed">AI voice workflow demonstrating narration integration and production processing.</p></div>
+                <button onclick="toggleAudio('eleven labs voice generation from script.mp3', this)" class="mt-4 px-3 py-1.5 border border-purple-500/30 text-[11px] font-mono text-purple-400 rounded hover:bg-purple-900/20">▶ PREVIEW SYSTEM</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-6 lg:px-12 py-16">
+        <h2 class="text-xl font-bold tracking-widest text-center text-white uppercase mb-12">PRODUCTION TIMELINE & CASES</h2>
+        <div class="space-y-4">
+            <div class="p-6 rounded-xl border border-purple-500/10 bg-zinc-900/40">
+                <span class="text-[10px] font-mono text-purple-400">POCKETFM ENGAGEMENT</span>
+                <h3 class="text-base font-bold text-white mt-1 mb-2">Sound Engineer Portfolio Core</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">Worked on immersive storytelling content reaching millions of listeners globally. Managed end-to-end editing, mixing, mastering, and audio dialogue enhancement pipelines for high-tier serialized content like "Insta Millionaire".</p>
+            </div>
+            <div class="p-6 rounded-xl border border-purple-500/10 bg-zinc-900/40">
+                <span class="text-[10px] font-mono text-purple-400">HARDWARE OPERATION</span>
+                <h3 class="text-base font-bold text-white mt-1 mb-2">Allen & Heath SQ5 AV Engineer</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">Configured multi-track live audio routing architectures, broadcast matrix balancing, and active real-time dynamic vocal space adjustments.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="connect" class="max-w-3xl mx-auto px-6 py-24 text-center">
+        <h2 class="text-2xl sm:text-4xl font-black text-white uppercase mb-4">LET'S CONNECT</h2>
+        <p class="text-xs text-zinc-400 mb-8">Reach out directly for professional mixing tracking, foley sound design, or narrative post-production assets.</p>
+        <div class="mb-8"><a href="mailto:Gondhiaminmoy2131327@gmail.com" class="text-lg sm:text-xl font-mono text-purple-400 hover:underline break-all">Gondhiaminmoy2131327@gmail.com</a></div>
+        <div class="flex justify-center gap-8 font-mono text-xs text-zinc-500">
+            <a href="https://instagram.com/minmoy.wav" target="_blank" class="hover:text-purple-400">INSTAGRAM ↗</a>
+            <a href="https://linkedin.com/in/minmoy-g-912506112" target="_blank" class="hover:text-purple-400">LINKEDIN ↗</a>
+        </div>
+    </section>
+
+    <div id="infoModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4" onclick="closeModal()">
+        <div class="bg-zinc-950 border border-purple-500/30 rounded-2xl p-6 w-full max-w-sm space-y-4" onclick="event.stopPropagation()">
+            <div class="flex justify-between items-center border-b border-purple-500/10 pb-2">
+                <h3 id="modalTitle" class="text-sm font-bold text-white uppercase"></h3>
+                <button onclick="closeModal()" class="text-xs font-mono text-zinc-500 hover:text-white">CLOSE</button>
+            </div>
+            <p id="modalDesc" class="text-xs text-zinc-400 leading-relaxed"></p>
+            <p id="modalTools" class="text-[11px] font-mono text-purple-400"></p>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('globalAudioEngine');
+        let currentBtn = null;
+
+        function toggleAudio(src, btn) {
+            if (audio.src.includes(src)) {
+                if (audio.paused) { audio.play(); btn.innerText = '⏸'; }
+                else { audio.pause(); btn.innerText = '▶'; }
+            } else {
+                if (currentBtn) currentBtn.innerText = '▶';
+                audio.src = src;
+                audio.play();
+                btn.innerText = '⏸';
+                currentBtn = btn;
+            }
+        }
+        function resetAudioUI() { if (currentBtn) currentBtn.innerText = '▶'; }
+        function openModal(title, desc, tools) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('modalTools').innerText = 'ENVIRONMENT: ' + tools;
+            document.getElementById('infoModal').classList.remove('hidden');
+        }
+        function closeModal() { document.getElementById('infoModal').classList.add('hidden'); }
+    </script>
+</body>
+</html>
