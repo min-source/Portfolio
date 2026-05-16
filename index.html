@@ -172,7 +172,6 @@
         const audio = document.getElementById('globalAudioEngine');
         let currentBtn = null;
 
-        // Custom function to handle audio play profiles with space string encodings
         function toggleAudio(src, btn) {
             if (audio.src.includes(src)) {
                 if (audio.paused) { audio.play(); btn.innerText = '⏸'; }
