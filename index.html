@@ -38,9 +38,8 @@
             <div class="relative group">
                 <div class="absolute inset-0 rounded-2xl bg-purple-600 opacity-20 filter blur-xl"></div>
                 <div class="w-56 h-72 rounded-2xl border border-purple-500/20 overflow-hidden bg-zinc-900 flex items-center justify-center p-2">
-                    <img src="guitar.png" onerror="this.onerror=null; this.src='./guitar.png'; this.setAttribute('src', '../guitar.png');" alt="Minmoy Gondhia Studio Work" class="w-full h-full object-cover rounded-xl opacity-80 group-hover:opacity-100 transition-all duration-500">
-                    <div class="absolute bottom-4 left-4 text-[10px] font-mono text-purple-400 tracking-wider">STUDIO_ARRAY_01</div>
-                </div>
+                    <img src="hero.png" alt="Minmoy Gondhia Studio Work" class="w-full h-full object-cover rounded-xl opacity-70 group-hover:opacity-100 transition-all duration-500">
+                    <div class="absolute bottom-4 left-4 text-[10px] font-mono text-purple-400 tracking-wider"
             </div>
         </div>
 
@@ -82,7 +81,7 @@
         <h2 class="text-xl font-bold tracking-widest text-white uppercase mb-8 border-b border-purple-500/10 pb-2">MUSIC PRODUCTION</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="p-6 rounded-xl border border-purple-500/10 bg-zinc-900/30 flex items-center gap-6">
-                <button onclick="toggleAudio('back to you remix.mp3', this)" class="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-lg hover:bg-purple-500 shrink-0">▶</button>
+                <button onclick="toggleAudio('back%20to%20you%20remix.mp3', this)" class="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-lg hover:bg-purple-500 shrink-0">▶</button>
                 <div>
                     <h3 class="text-sm font-bold text-white">Back To You – Remix (01:38)</h3>
                     <p class="text-xs text-zinc-400 mt-1">A remix project showcasing arrangement choices, musical interpretation and production workflow.</p>
@@ -100,10 +99,10 @@
 
     <section class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
         <h2 class="text-xl font-bold tracking-widest text-white uppercase mb-8 border-b border-purple-500/10 pb-2">AUDIO POST-PRODUCTION WORK</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div class="p-5 rounded-xl border border-purple-500/10 bg-zinc-900/20 flex flex-col justify-between">
                 <div><h3 class="text-xs font-bold text-white uppercase mb-2">pocketfm audiostory final output.mp3 (13:14)</h3><p class="text-xs text-zinc-400 leading-relaxed">Dialogue editing, sound cleanup, sound design, background score placement, mixing and mastering.</p></div>
-                <button onclick="toggleAudio('portfolio for audiostory.mp3', this)" class="mt-4 px-3 py-1.5 border border-purple-500/30 text-[11px] font-mono text-purple-400 rounded hover:bg-purple-900/20">▶</button>
+                <button onclick="toggleAudio('portfolio%20for%20audiostory.mp3', this)" class="mt-4 px-3 py-1.5 border border-purple-500/30 text-[11px] font-mono text-purple-400 rounded hover:bg-purple-900/20">▶</button>
             </div>
             <div class="p-5 rounded-xl border border-purple-500/10 bg-zinc-900/20 flex flex-col justify-between">
                 <div><h3 class="text-xs font-bold text-white uppercase mb-2">kukufm audiostory final output.mp3 (05:48)</h3><p class="text-xs text-zinc-400 leading-relaxed">Audio post-production involving narrative enhancement and polished listener experience along with sound design, background score placement, mixing and mastering.</p></div>
@@ -111,11 +110,7 @@
             </div>
             <div class="p-5 rounded-xl border border-purple-500/10 bg-zinc-900/20 flex flex-col justify-between">
                 <div><h3 class="text-xs font-bold text-white uppercase mb-2">elevenlabs audio.mp3 (02:52)</h3><p class="text-xs text-zinc-400 leading-relaxed">AI narration workflow demonstrating narration generation, enhancement, integration, and audio post-production.</p></div>
-                <button onclick="toggleAudio('eleven labs voice generation from script.mp3', this)" class="mt-4 px-3 py-1.5 border border-purple-500/30 text-[11px] font-mono text-purple-400 rounded hover:bg-purple-900/20">▶</button>
-            </div>
-            <div class="p-5 rounded-xl border border-purple-500/10 bg-zinc-900/20 flex flex-col justify-between">
-                <div><h3 class="text-xs font-bold text-white uppercase mb-2">Audiostory portfolio.mp3</h3><p class="text-xs text-zinc-400 leading-relaxed">Showcase reel featuring voice balances, multi-track layout editing, background elements, and creative master compilation.</p></div>
-                <button onclick="toggleAudio('Audiostory portfolio.mp3', this)" class="mt-4 px-3 py-1.5 border border-purple-500/30 text-[11px] font-mono text-purple-400 rounded hover:bg-purple-900/20">▶</button>
+                <button onclick="toggleAudio('eleven%20labs%20voice%20generation%20from%20script.mp3', this)" class="mt-4 px-3 py-1.5 border border-purple-500/30 text-[11px] font-mono text-purple-400 rounded hover:bg-purple-900/20">▶</button>
             </div>
         </div>
     </section>
@@ -130,10 +125,7 @@
                 <div class="text-xs font-mono text-zinc-500">DURATION: <span class="text-purple-400">01:26</span></div>
             </div>
             <div class="lg:col-span-7 w-full rounded-xl overflow-hidden border border-purple-500/10 bg-black aspect-video">
-                <video id="portfolioVideo" controls class="w-full h-full object-cover">
-                    <source src="video/mercedes gls rework.mp4" type="video/mp4">
-                    <source src="../video/mercedes gls rework.mp4" type="video/mp4">
-                </video>
+                <video src="mercedes%20gls%20rework.mp4" controls class="w-full h-full object-cover"></video>
             </div>
         </div>
     </section>
@@ -178,57 +170,27 @@
     <script>
         const audio = document.getElementById('globalAudioEngine');
         let currentBtn = null;
-        let activeTrackName = null;
 
-        function toggleAudio(filename, btn) {
-            if (activeTrackName === filename) {
-                if (audio.paused) { 
-                    audio.play(); 
-                    btn.innerText = '⏸'; 
-                } else { 
-                    audio.pause(); 
-                    btn.innerText = '▶'; 
-                }
+        // Custom function to handle audio play profiles with space string encodings
+        function toggleAudio(src, btn) {
+            if (audio.src.includes(src)) {
+                if (audio.paused) { audio.play(); btn.innerText = '⏸'; }
+                else { audio.pause(); btn.innerText = '▶'; }
             } else {
                 if (currentBtn) currentBtn.innerText = '▶';
-                
-                activeTrackName = filename;
-                
-                // Smart Path Auto-Discovery: Works seamlessly if index.html is on the main page OR inside the audio folder
-                let currentUrl = window.location.pathname;
-                let finalPath = "";
-                
-                if (currentUrl.endsWith('/audio') || currentUrl.endsWith('/audio/')) {
-                    finalPath = encodeURI(filename);
-                } else {
-                    finalPath = encodeURI("audio/" + filename);
-                }
-                
-                audio.src = finalPath;
-                audio.play().catch(err => {
-                    // Fail-safe layout search block if absolute nesting paths shift on server
-                    let alternatePath = encodeURI("../audio/" + filename);
-                    audio.src = alternatePath;
-                    audio.play().catch(e => console.log("System stream sync complete.", e));
-                });
-                
+                audio.src = src;
+                audio.play();
                 btn.innerText = '⏸';
                 currentBtn = btn;
             }
         }
-        
-        function resetAudioUI() { 
-            if (currentBtn) currentBtn.innerText = '▶'; 
-            activeTrackName = null;
-        }
-        
+        function resetAudioUI() { if (currentBtn) currentBtn.innerText = '▶'; }
         function openModal(title, desc, tools) {
             document.getElementById('modalTitle').innerText = title;
             document.getElementById('modalDesc').innerText = desc;
             document.getElementById('modalTools').innerText = 'ENVIRONMENT: ' + tools;
             document.getElementById('infoModal').classList.remove('hidden');
         }
-        
         function closeModal() { document.getElementById('infoModal').classList.add('hidden'); }
     </script>
 </body>
